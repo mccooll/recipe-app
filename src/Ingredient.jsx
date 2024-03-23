@@ -1,6 +1,6 @@
 function Ingredient({ name, amount }) {
   return (
-    <li>
+    <li key={name}>
       {amount} {name}
     </li>
   )

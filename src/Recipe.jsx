@@ -8,13 +8,13 @@ function Recipe({ title, ingredients, steps}) {
                 <h2 style={{ margin: '0 0 10px' }}>{title}</h2>
                 <ul>
                     {ingredients.map(({name, amount}) => (
-                        <Ingredient name={name} amount={amount}></Ingredient>
+                        <Ingredient name={name} key={name} amount={amount}></Ingredient>
                     ))}
                 </ul>
                 <div>
                 <ol>
-                    {steps.map(step => 
-                        <li>{step}</li>
+                    {steps.map((step,i) => 
+                        <li key={i}>{step}</li>
                     )}
                 </ol>
                 </div>
