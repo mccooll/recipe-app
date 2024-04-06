@@ -72,6 +72,8 @@ function App() {
   function saveNewRecipe(e) {
     e.preventDefault()
     if(!newRecipe.title) alert('Please enter a title')
+    newRecipe.ingredients.pop()
+    newRecipe.steps.pop()
     setRecipes([...recipes, newRecipe])
     setNewRecipe({title:'',ingredients:[{amount:'0 cups', name:''}],steps:['']}) // reset the form
     setCreatingNewRecipe(false)

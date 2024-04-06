@@ -69,6 +69,19 @@
         "Mix",
         ""
       ]
+    },
+    {
+      "id": "4f1a",
+      "title": "Muffin2",
+      "ingredients": [
+        {
+          "amount": "0 cups",
+          "name": "Fluor2"
+        }
+      ],
+      "steps": [
+        "Mix2"
+      ]
     }
   ]
 }
