@@ -1,1 +1,74 @@
-{"recipes":[{"title":"Grandma’s Famous Cookies","ingredients":[{"name":"flour","amount":"8 cups"},{"name":"sugar","amount":"4 cups"},{"name":"chocolate chips","amount":"2 cups"},{"name":"butter","amount":"4 cups"}],"steps":["Preheat the oven to 350 degrees","Mix together the flour, sugar, and eggs","Fold in the chocolate chips","Spread the mixture into a baking pan","Bake for 20 minutes"]},{"title":"Spaghetti","ingredients":[{"name":"pasta","amount":"1 pound"},{"name":"water","amount":"2 quarts"},{"name":"salt","amount":"1 pinch"}],"steps":["Boil water","Add pasta","Cook for 12 minutes"]}]}
+{
+  "recipes": [
+    {
+      "title": "Grandma’s Famous Cookies",
+      "ingredients": [
+        {
+          "name": "flour",
+          "amount": "8 cups"
+        },
+        {
+          "name": "sugar",
+          "amount": "4 cups"
+        },
+        {
+          "name": "chocolate chips",
+          "amount": "2 cups"
+        },
+        {
+          "name": "butter",
+          "amount": "4 cups"
+        }
+      ],
+      "steps": [
+        "Preheat the oven to 350 degrees",
+        "Mix together the flour, sugar, and eggs",
+        "Fold in the chocolate chips",
+        "Spread the mixture into a baking pan",
+        "Bake for 20 minutes"
+      ],
+      "id": "d55c"
+    },
+    {
+      "title": "Spaghetti",
+      "ingredients": [
+        {
+          "name": "pasta",
+          "amount": "1 pound"
+        },
+        {
+          "name": "water",
+          "amount": "2 quarts"
+        },
+        {
+          "name": "salt",
+          "amount": "1 pinch"
+        }
+      ],
+      "steps": [
+        "Boil water",
+        "Add pasta",
+        "Cook for 12 minutes"
+      ],
+      "id": "5bad"
+    },
+    {
+      "id": "5444",
+      "title": "Muffin",
+      "ingredients": [
+        {
+          "amount": "0 cups",
+          "name": "Fluor"
+        },
+        {
+          "amount": "0 cups",
+          "name": ""
+        }
+      ],
+      "steps": [
+        "Mix",
+        ""
+      ]
+    }
+  ]
+}

@@ -69,6 +69,21 @@ function App() {
     setNewRecipe({...newRecipe, steps: updatedSteps} )
   }
 
+  function saveNewRecipe(e) {
+    e.preventDefault()
+    if(!newRecipe.title) alert('Please enter a title')
+    setRecipes([...recipes, newRecipe])
+    setNewRecipe({title:'',ingredients:[{amount:'0 cups', name:''}],steps:['']}) // reset the form
+    setCreatingNewRecipe(false)
+    fetch('http://localhost:3000/recipes', {
+      method: 'POST',
+      // headers: {
+      //   'Content-Type': 'application/json'
+      // },
+      body: JSON.stringify(newRecipe)
+    })
+  }
+
   return (
     <>
       <div>
@@ -76,7 +91,7 @@ function App() {
                 <h1>Recipe App</h1>
             </header>
             <button onClick={()=>setCreatingNewRecipe(true)}>New Recipe</button>
-            {!creatingNewRecipe && <form>
+            {creatingNewRecipe && <form>
                 <input type="text" placeholder="Title" value={newRecipe.title} onChange={e=>setNewRecipeTitle(e.target.value)} />
                 <h3>Ingredients</h3>
                 <ol>
@@ -93,6 +108,7 @@ function App() {
                   <li><input type="text" placeholder="Step" value={step} onChange={e => setNewRecipeStep(e.target.value,index)}/></li>
                 ))}
                 </ol>
+                <button onClick={(e)=>{saveNewRecipe(e)}}>SAVE</button>
             </form>}
             <Navigator callback={i=>setSelectedRecipe(i)} selectedRecipe={selectedRecipe} recipes={recipes} />
             <div style={{ maxWidth: '800px', margin: '20px auto', padding: '0 20px' }}>
